@@ -1,4 +1,4 @@
-let chineseChars = /[ ,，。　？\n]/;
+let chineseChars = /[ ,，。、　？；\/\n]/;
 
 function listSubstraction(l1, l2) {
     if (l1.length == 0) {
