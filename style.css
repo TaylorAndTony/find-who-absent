@@ -1,5 +1,4 @@
 :root {
-    --head-height: 80px;
     --head-bg: #d0ebff;
     --bg: white;
     --c1: #1565c0;
@@ -18,13 +17,15 @@ html {
 }
 
 #head {
+    /* once loaded, js will change this two height */
+    height: 100vh;
+    line-height: 100vh;
     background-color: var(--head-bg);
-    height: var(--head-height);
-    line-height: var(--head-height);
     text-align: center;
     font-size: 20px;
     color: var(--c1);
     margin-bottom: 20px;
+    transition: 1s ease-in-out;
 }
 
 #main {

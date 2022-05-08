@@ -51,7 +51,21 @@ function checkWhoAbsent() {
     $('#result-count').text(result.length);
 }
 
+function makePageLoading() {
+    $('#head').css('height', '100vh');
+    $('#head').css('line-height', '100vh');
+    $('#head').text('加载中...');
+
+}
+function makePageReady() {
+    $('#head').css('height', '80px');
+    $('#head').css('line-height', '80px');
+    $('#head').text('缺席人员速查');
+
+}
+
 window.onload = () => {
     $('#all-member-text').on('input', checkWhoAbsent);
     $('#real-member-text').on('input', checkWhoAbsent);
+    makePageReady();
 }
