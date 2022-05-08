@@ -56,7 +56,17 @@ html {
     min-height: 5rem;
 }
 
-textarea{
+textarea {
     position: relative;
     width: 90%;
+}
+
+/* highlight member count */
+.dight, #all-member-count {
+    font-size: 20px;
+    color: var(--c1);
+}
+
+#blank {
+    height: 200px;
 }

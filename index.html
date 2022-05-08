@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
     <script src="script.js"></script>
     <script src="jquery-3.6.0.js"></script>
     <title>Find Who Absent</title>
@@ -13,20 +14,24 @@
     <div id="head">Find Who Absent</div>
     <div id="main">
         <!-- 全员名单 -->
-        <div class="container" id="all-member">
+        <div id="all-member">
             <div class="title" id="all-member-title">全员名单</div>
+            <div class="digit" id="all-member-count">0</div>
             <textarea id="all-member-text" class="box" rows="8"></textarea>
         </div>
         <!-- 实际名单 -->
-        <div class="container" id="real-member">
+        <div id="real-member">
             <div class="title" id="real-member-title">实际名单</div>
+            <div class="dight" id="real-member-count">0</div>
             <textarea id="real-member-text" class="box" rows="8"></textarea>
         </div>
         <!-- 结果 -->
-        <div class="container" id="result">
+        <div id="result">
             <div class="title" id="result-title">缺席人员</div>
+            <div class="dight" id="result-count">0</div>
             <div class="box" id="result-show"></div>
         </div>
     </div>
+    <div id="blank"></div>
 </body>
 </html>

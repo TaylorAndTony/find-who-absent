@@ -18,12 +18,13 @@ function listSubstraction(l1, l2) {
 
 function checkWhoAbsent() {
     let allMembers = $('#all-member-text').val().match(chineseChars);
-    console.log(allMembers);
     if (allMembers == null) { return false; }
+    $('#all-member-count').text(allMembers.length);
 
     let absentMembers = $('#real-member-text').val().match(chineseChars);
     console.log(absentMembers);
     if (absentMembers == null) { return false; }
+    $('#real-member-count').text(absentMembers.length);
 
     let result = listSubstraction(allMembers, absentMembers);
     console.log('缺席：', result);
@@ -31,6 +32,7 @@ function checkWhoAbsent() {
         $('#result-show').text("");
     }
     $('#result-show').text(result.join(' '));
+    $('#result-count').text(result.length);
 }
 
 window.onload = () => {
