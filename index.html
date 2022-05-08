@@ -10,10 +10,23 @@
     <title>Find Who Absent</title>
 </head>
 <body>
+    <div id="head">Find Who Absent</div>
     <div id="main">
-        <div id="all-member"></div>
-        <div id="real-member"></div>
-        <div id="result"></div>
+        <!-- 全员名单 -->
+        <div class="container" id="all-member">
+            <div class="title" id="all-member-title">全员名单</div>
+            <textarea id="all-member-text" class="box" rows="8"></textarea>
+        </div>
+        <!-- 实际名单 -->
+        <div class="container" id="real-member">
+            <div class="title" id="real-member-title">实际名单</div>
+            <textarea id="real-member-text" class="box" rows="8"></textarea>
+        </div>
+        <!-- 结果 -->
+        <div class="container" id="result">
+            <div class="title" id="result-title">缺席人员</div>
+            <div class="box" id="result-show"></div>
+        </div>
     </div>
 </body>
 </html>
