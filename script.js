@@ -31,7 +31,7 @@ function checkWhoAbsent() {
     let absentMembers = $('#real-member-text').val().split(chineseChars);
     console.log(absentMembers);
     // 没有输入实际名单，那么默认所有人缺席
-    if (absentMembers == null ){
+    if (absentMembers == null) {
         $('#result-show').text(allMembers.join(' '));
         return false;
     }
@@ -58,9 +58,11 @@ function makePageLoading() {
 
 }
 function makePageReady() {
-    $('#head').css('height', '80px');
-    $('#head').css('line-height', '80px');
-    $('#head').text('缺席人员速查');
+    setTimeout(function () {
+        $('#head').css('height', '80px');
+        $('#head').css('line-height', '80px');
+        $('#head').text('缺席人员速查');
+    }, 500)
 
 }
 
