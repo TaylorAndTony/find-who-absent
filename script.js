@@ -16,9 +16,19 @@ function listSubstraction(l1, l2) {
     return l3;
 }
 
+function removeEmpty(list) {
+    let result = [];
+    for (let each of list) {
+        if (each.length > 0) {
+            result.push(each);
+        }
+    }
+    return result;
+}
+
 function checkWhoAbsent() {
     // 获取所有人
-    let allMembers = $('#all-member-text').val().split(chineseChars);
+    let allMembers = removeEmpty($('#all-member-text').val().split(chineseChars));
     // 如果没有人，则直接返回，并设置没有人缺席
     if (allMembers == null) {
         $('#result-show').text("");
@@ -28,11 +38,12 @@ function checkWhoAbsent() {
     $('#all-member-count').text(allMembers.length);
 
     // 获取实际人
-    let absentMembers = $('#real-member-text').val().split(chineseChars);
+    let absentMembers = removeEmpty($('#real-member-text').val().split(chineseChars));
     console.log(absentMembers);
     // 没有输入实际名单，那么默认所有人缺席
-    if (absentMembers == null) {
+    if (absentMembers == null || $('#real-member-text').val() === "") {
         $('#result-show').text(allMembers.join(' '));
+        $('#real-member-count').text(0);
         return false;
     }
     // 更新长度
