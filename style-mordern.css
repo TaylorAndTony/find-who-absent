@@ -28,6 +28,10 @@ html {
     transition: 1s ease-in-out;
 }
 
+#theme {
+    text-align: center;
+}
+
 #main {
     width: 80%;
     max-width: 900px;

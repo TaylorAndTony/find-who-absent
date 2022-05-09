@@ -14,6 +14,13 @@
 
 <body>
     <div id="head">加载中...</div>
+    <div id="theme">主题：
+        <select>
+            <option value="style-mordern.css">现代</option>
+            <option value="style-neu.css">2.5D</option>
+            <option value="style.css">蓝色</option>
+        </select>
+    </div>
     <div id="main">
         <!-- 全员名单 -->
         <div id="all-member">
@@ -46,6 +53,14 @@
         </div>
     </div>
     <div id="blank"></div>
+
+    <script>
+        // change css when select changed
+        $("select").change(function() {
+            $("link[rel=stylesheet]").attr("href", $(this).val());
+        });
+
+    </script>
 </body>
 
 </html>
