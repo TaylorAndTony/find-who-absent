@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-neu.css">
+    <link rel="stylesheet" href="style-mordern.css">
     <link rel="shortcut icon" href="favicon.png" type="image/png">
     <script src="script.js"></script>
     <script src="jquery-3.6.0.js"></script>
@@ -18,18 +18,18 @@
         <!-- 全员名单 -->
         <div id="all-member">
             <div class="title" id="all-member-title">全员名单</div>
-            <div>
+            <div class="attach-info">
                 <span class="digit" id="all-member-count">0</span>
                 <span class="digit">人</span>
+                <div class="digit">(支持用空格、回车、中英文逗号分隔)</div>
+                <div class="digit">(名单结尾不要有空格或回车)</div>
             </div>
-            <div class="digit">(支持用空格、回车、中英文逗号分隔)</div>
-            <div class="digit">(名单结尾不要有空格或回车)</div>
             <textarea id="all-member-text" class="box" rows="8"></textarea>
         </div>
         <!-- 实际名单 -->
         <div id="real-member">
             <div class="title" id="real-member-title">实际名单</div>
-            <div>
+            <div class="attach-info">
                 <span class="dight" id="real-member-count">0</span>
                 <span class="digit">人</span>
             </div>
@@ -38,7 +38,7 @@
         <!-- 结果 -->
         <div id="result">
             <div class="title" id="result-title">缺席人员</div>
-            <div>
+            <div class="attach-info">
                 <span class="dight" id="result-count">0</span>
                 <span class="digit">人</span>
             </div>
