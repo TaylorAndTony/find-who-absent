@@ -31,7 +31,7 @@ function checkWhoAbsent() {
     let allMembers = removeEmpty($('#all-member-text').val().split(chineseChars));
     // 如果没有人，则直接返回，并设置没有人缺席
     if (allMembers == null) {
-        $('#result-show').text("");
+        $('#result-show').val("");
         return false;
     }
     // 有人，则设置长度
@@ -42,7 +42,7 @@ function checkWhoAbsent() {
     console.log(absentMembers);
     // 没有输入实际名单，那么默认所有人缺席
     if (absentMembers == null || $('#real-member-text').val() === "") {
-        $('#result-show').text(allMembers.join(' '));
+        $('#result-show').val(allMembers.join(' '));
         $('#real-member-count').text(0);
         return false;
     }
@@ -54,11 +54,11 @@ function checkWhoAbsent() {
     console.log('缺席：', result);
     // 没有缺席
     if (result.length == 0) {
-        $('#result-show').text("");
+        $('#result-show').val("");
         $('#result-count').text(0);
         return;
     }
-    $('#result-show').text(result.join(' '));
+    $('#result-show').val(result.join(' '));
     $('#result-count').text(result.length);
 }
 
